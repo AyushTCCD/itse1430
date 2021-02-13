@@ -214,7 +214,7 @@ namespace Budget
         private static void WithDraw()
         {
             Console.Clear();
-            Console.WriteLine("Budget\nITSE 1430\nSpring 2021\nAyush Algburi\n");
+            Console.WriteLine("Budget\nITSE 1430\nSpring 2021\nAyush Bhattarai\n");
 
             Console.WriteLine("Account Name: " + accountName);
             Console.WriteLine("Account Number: " + accountNumber);
