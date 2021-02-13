@@ -46,9 +46,9 @@ namespace Budget
 
             Console.WriteLine("Budget\nITSE 1430\nSpring 2021\nAyush Bhattarai\n");
 
-            while (String.IsNullOrEmpty(accountName) && accountNameEntered == false)
+            while(String.IsNullOrEmpty(accountName) && accountNameEntered == false)
             {
-                if (firstTime == false)
+                if(firstTime == false)
                 {
                     Console.WriteLine("Value is required");
                 }
@@ -61,12 +61,12 @@ namespace Budget
                 firstTime = false;
             }
 
-            if (!String.IsNullOrEmpty(accountName))
+            if(!String.IsNullOrEmpty(accountName))
             {
                 accountNameEntered = true;
             }
 
-            if (accountNameEntered == true)
+            if(accountNameEntered == true)
             {
                 while (wrongNumberEntered)
                 {
@@ -80,17 +80,17 @@ namespace Budget
                 }
             }
 
-            if (accountNameEntered == true && wrongNumberEntered == false)
+            if(accountNameEntered == true && wrongNumberEntered == false)
             {
-                bool rightBalanceEntered = false;
+                bool rightBalanceEntered = false; 
 
-                while (!rightBalanceEntered)
+                while(!rightBalanceEntered)
                 {
                     Console.WriteLine("\nStarting Account Balance?");
                     startingBalanceString = Console.ReadLine();
                     decimal.TryParse(startingBalanceString, out startingBalance);
-
-                    if (startingBalance == 0)
+                    
+                    if(startingBalance == 0)
                     {
                         rightBalanceEntered = false;
                         Console.WriteLine("Please Enter Numbers only.");
@@ -124,7 +124,7 @@ namespace Budget
             Console.WriteLine("Account Number: " + accountNumber);
             Console.WriteLine("Account Balance: " + "$" + startingBalance + "\n");
 
-            while (amount <= 0)
+            while(amount <= 0)
             {
                 Console.WriteLine("\nAmount? (Can only be positive) (Required) ");
                 amountInString = Console.ReadLine();
@@ -150,7 +150,7 @@ namespace Budget
                     break;
                 default:
                     CheckNumber();
-                    break;
+                 break;
             }
         }
 
@@ -225,7 +225,7 @@ namespace Budget
                 Console.WriteLine("\nAmount? (Can only be positive) (Required) ");
                 amountInStringOut = Console.ReadLine();
                 decimal.TryParse(amountInStringOut, out amountOut);
-                if (amountOut > startingBalance)
+                if(amountOut > startingBalance)
                 {
                     Console.WriteLine("Not Enough Money!");
                 }
